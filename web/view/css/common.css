@@ -1,0 +1,47 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color:white;
+}
+
+.form-signin{
+    max-width: 290px;
+    background: lavender;
+    padding: 10px;
+    border-radius: 16px;
+    margin: 0 auto;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);;
+}
+
+.alert-danger{
+    padding: 10px;
+}
+
+
+
+
+.tableInfo{
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 16px;
+    margin: 0 auto;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);;
+}
+/*label.form-control{*/
+/*    margin: 7px;*/
+/*}*/
+
+/*.form-signin .form-control{*/
+/*    position: relative;*/
+/*    height: auto;*/
+
+/*    box-sizing: border-box;*/
+/*    padding: 10px;*/
+/*    font-size: 20px;*/
+/*}*/
+
+/*.form-signin input {*/
+/*    padding: 15px;*/
+/*    margin-left: inherit;*/
+/*    border-radius: 9px;*/
+/*}*/

@@ -1,0 +1,340 @@
+2021-02-18 22:46:21 INFO  UserDAO:127 - User is exist
+2021-02-18 22:46:21 INFO  UserDAO:157 - User role got
+2021-02-18 22:46:21 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-18 22:46:21 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-18 22:46:21 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-18 22:46:21 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-18 22:46:21 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-18 22:46:21 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-18 22:46:21 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-18 22:46:21 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-18 22:46:21 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-18 22:46:21 INFO  OrderService:63 - orders selected
+2021-02-18 22:46:30 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-18 22:46:30 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-18 22:46:30 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-18 22:46:30 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-18 22:46:30 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-18 22:46:30 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-18 22:46:30 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-18 22:46:30 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-18 22:46:30 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-18 22:46:30 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-18 22:46:30 INFO  OrderService:176 - orders selected
+2021-02-19 13:34:03 INFO  UserDAO:127 - User is exist
+2021-02-19 13:34:03 INFO  UserDAO:157 - User role got
+2021-02-19 13:34:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 13:34:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 13:34:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 13:34:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 13:34:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 13:34:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 13:34:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 13:34:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 13:34:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 13:34:03 INFO  OrderService:63 - orders selected
+2021-02-19 14:08:06 INFO  UserDAO:127 - User is exist
+2021-02-19 14:08:06 INFO  UserDAO:157 - User role got
+2021-02-19 14:08:06 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:08:06 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:08:06 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:08:06 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:08:06 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:08:06 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:08:06 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:08:06 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:08:06 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:08:06 INFO  OrderService:63 - orders selected
+2021-02-19 14:10:25 INFO  UserDAO:127 - User is exist
+2021-02-19 14:10:25 INFO  UserDAO:157 - User role got
+2021-02-19 14:10:25 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:10:25 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:10:25 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:10:25 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:10:25 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:10:25 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:10:25 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:10:25 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:10:25 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:10:25 INFO  OrderService:63 - orders selected
+2021-02-19 14:12:11 INFO  UserDAO:127 - User is exist
+2021-02-19 14:12:11 INFO  UserDAO:157 - User role got
+2021-02-19 14:12:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:12:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:12:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:12:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:12:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:12:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:12:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:12:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:12:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:12:11 INFO  OrderService:63 - orders selected
+2021-02-19 14:13:09 INFO  OrderDAO:286 - Code from order with id: 7 got!
+2021-02-19 14:13:09 INFO  OrderService:368 - Code from order got
+2021-02-19 14:13:09 INFO  OrderDAO:247 - Order payed!
+2021-02-19 14:13:10 INFO  OrderService:313 - Order was payed
+2021-02-19 14:20:37 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:20:37 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:20:37 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:20:37 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:20:37 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:20:37 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:20:37 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:20:37 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:20:37 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:20:37 INFO  OrderService:63 - orders selected
+2021-02-19 14:26:10 INFO  UserDAO:127 - User is exist
+2021-02-19 14:26:10 INFO  UserDAO:157 - User role got
+2021-02-19 14:26:10 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:10 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:10 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:10 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:10 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:10 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:10 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:10 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:10 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:10 INFO  OrderService:63 - orders selected
+2021-02-19 14:26:16 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:16 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:16 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:16 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:16 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:16 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:16 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:16 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:16 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:26:16 INFO  OrderService:63 - orders selected
+2021-02-19 14:26:42 INFO  OrderDAO:286 - Code from order with id: 7 got!
+2021-02-19 14:26:42 INFO  OrderService:368 - Code from order got
+2021-02-19 14:26:42 INFO  OrderDAO:247 - Order payed!
+2021-02-19 14:26:42 INFO  OrderService:313 - Order was payed
+2021-02-19 14:27:52 INFO  UserDAO:127 - User is exist
+2021-02-19 14:27:52 INFO  UserDAO:157 - User role got
+2021-02-19 14:27:54 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:27:54 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:27:54 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:27:54 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:27:54 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:27:54 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:27:54 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:27:54 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:27:54 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:27:54 INFO  OrderService:63 - orders selected
+2021-02-19 14:28:03 INFO  OrderDAO:286 - Code from order with id: 7 got!
+2021-02-19 14:28:03 INFO  OrderService:368 - Code from order got
+2021-02-19 14:28:03 INFO  OrderDAO:247 - Order payed!
+2021-02-19 14:28:03 INFO  OrderService:313 - Order was payed
+2021-02-19 14:29:58 INFO  UserDAO:127 - User is exist
+2021-02-19 14:29:58 INFO  UserDAO:157 - User role got
+2021-02-19 14:29:58 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:29:58 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:29:58 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:29:58 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:29:58 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:29:58 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:29:58 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:29:58 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:29:58 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:29:58 INFO  OrderService:63 - orders selected
+2021-02-19 14:30:10 INFO  OrderDAO:286 - Code from order with id: 7 got!
+2021-02-19 14:30:10 INFO  OrderService:368 - Code from order got
+2021-02-19 14:30:10 INFO  OrderDAO:247 - Order payed!
+2021-02-19 14:30:10 INFO  OrderService:313 - Order was payed
+2021-02-19 14:32:41 INFO  UserDAO:127 - User is exist
+2021-02-19 14:32:41 INFO  UserDAO:157 - User role got
+2021-02-19 14:32:41 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:32:41 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:32:41 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:32:41 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:32:41 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:32:41 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:32:41 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:32:41 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:32:41 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:32:41 INFO  OrderService:63 - orders selected
+2021-02-19 14:32:51 INFO  OrderDAO:286 - Code from order with id: 7 got!
+2021-02-19 14:32:51 INFO  OrderService:368 - Code from order got
+2021-02-19 14:32:51 INFO  OrderDAO:247 - Order payed!
+2021-02-19 14:32:51 INFO  OrderService:313 - Order was payed
+2021-02-19 14:34:03 INFO  OrderDAO:286 - Code from order with id: 7 got!
+2021-02-19 14:34:03 INFO  OrderService:368 - Code from order got
+2021-02-19 14:34:03 INFO  OrderDAO:247 - Order payed!
+2021-02-19 14:34:03 INFO  OrderService:313 - Order was payed
+2021-02-19 14:34:45 INFO  OrderDAO:286 - Code from order with id: 7 got!
+2021-02-19 14:34:45 INFO  OrderService:368 - Code from order got
+2021-02-19 14:34:45 INFO  OrderDAO:247 - Order payed!
+2021-02-19 14:34:45 INFO  OrderService:313 - Order was payed
+2021-02-19 14:38:00 INFO  UserDAO:127 - User is exist
+2021-02-19 14:38:00 INFO  UserDAO:157 - User role got
+2021-02-19 14:38:00 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:38:00 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:38:00 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:38:00 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:38:00 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:38:00 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:38:00 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:38:00 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:38:00 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 14:38:00 INFO  OrderService:63 - orders selected
+2021-02-19 14:38:18 INFO  OrderDAO:286 - Code from order with id: 7 got!
+2021-02-19 14:38:18 INFO  OrderService:368 - Code from order got
+2021-02-19 14:38:18 INFO  OrderDAO:247 - Order payed!
+2021-02-19 14:38:18 INFO  OrderService:313 - Order was payed
+2021-02-19 15:40:31 INFO  UserDAO:127 - User is exist
+2021-02-19 15:40:31 INFO  UserDAO:157 - User role got
+2021-02-19 15:40:31 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:40:31 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:40:31 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:40:31 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:40:31 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:40:31 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:40:31 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:40:31 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:40:31 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:40:31 INFO  OrderService:63 - orders selected
+2021-02-19 15:41:25 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-19 15:41:25 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-19 15:41:25 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-19 15:41:25 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-19 15:41:25 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-19 15:41:25 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-19 15:41:25 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-19 15:41:25 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-19 15:41:25 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-19 15:41:25 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-19 15:41:25 INFO  OrderService:231 - orders by time selected
+2021-02-19 15:41:36 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-19 15:41:36 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-19 15:41:36 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-19 15:41:36 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-19 15:41:36 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-19 15:41:36 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-19 15:41:36 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-19 15:41:36 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-19 15:41:36 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-19 15:41:36 INFO  OrderDAO:143 - Top 3 orders by price was selected!
+2021-02-19 15:41:36 INFO  OrderService:176 - orders selected
+2021-02-19 15:41:51 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:41:51 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:41:51 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:41:51 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:41:51 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:41:51 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:41:51 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:41:51 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:41:51 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-19 15:41:51 INFO  OrderService:63 - orders selected
+2021-02-19 15:42:24 INFO  UserDAO:127 - User is exist
+2021-02-19 15:42:24 INFO  UserDAO:157 - User role got
+2021-02-19 15:42:24 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:42:24 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:42:24 INFO  OrderService:423 - All orders by limit got!
+2021-02-19 15:42:24 INFO  OrderService:395 - Orders count -10
+2021-02-19 15:42:40 INFO  OrderDAO:360 - Count of paid orders was get
+2021-02-19 15:42:40 INFO  OrderService:446 - All orders by day were get!
+2021-02-19 15:42:40 INFO  OrderDAO:381 - Avg road was get!
+2021-02-19 15:42:52 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:42:52 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:42:52 INFO  OrderService:423 - All orders by limit got!
+2021-02-19 15:42:52 INFO  OrderService:395 - Orders count -10
+2021-02-19 15:42:57 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:42:57 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:42:57 INFO  OrderService:423 - All orders by limit got!
+2021-02-19 15:42:57 INFO  OrderService:395 - Orders count -10
+2021-02-19 15:42:57 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:42:57 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:42:57 INFO  OrderService:423 - All orders by limit got!
+2021-02-19 15:42:57 INFO  OrderService:395 - Orders count -10
+2021-02-19 15:42:58 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:42:58 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:42:58 INFO  OrderService:423 - All orders by limit got!
+2021-02-19 15:42:58 INFO  OrderService:395 - Orders count -10
+2021-02-19 15:42:58 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:42:58 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:42:58 INFO  OrderService:423 - All orders by limit got!
+2021-02-19 15:42:58 INFO  OrderService:395 - Orders count -10
+2021-02-19 15:43:00 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:43:00 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:43:00 INFO  OrderService:423 - All orders by limit got!
+2021-02-19 15:43:00 INFO  OrderService:395 - Orders count -10
+2021-02-19 15:43:00 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:43:00 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:43:00 INFO  OrderService:423 - All orders by limit got!
+2021-02-19 15:43:00 INFO  OrderService:395 - Orders count -10
+2021-02-19 15:43:00 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:43:00 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:43:00 INFO  OrderService:423 - All orders by limit got!
+2021-02-19 15:43:00 INFO  OrderService:395 - Orders count -10
+2021-02-19 15:43:01 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:43:01 INFO  OrderDAO:331 - All orders is got!
+2021-02-19 15:43:01 INFO  OrderService:423 - All orders by limit got!
+2021-02-19 15:43:01 INFO  OrderService:395 - Orders count -10
+2021-02-20 15:25:02 INFO  UserDAO:213 - User was get
+2021-02-20 15:36:14 INFO  UserDAO:214 - User was get
+2021-02-20 15:41:07 INFO  UserDAO:214 - User was get
+2021-02-20 15:44:11 INFO  UserDAO:213 - User was get
+2021-02-20 15:44:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 15:44:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 15:44:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 15:44:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 15:44:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 15:44:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 15:44:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 15:44:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 15:44:11 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 15:44:11 INFO  OrderService:63 - orders selected
+2021-02-20 15:44:23 INFO  UserDAO:213 - User was get
+2021-02-20 15:44:38 INFO  UserDAO:213 - User was get
+2021-02-20 15:45:22 INFO  UserDAO:213 - User was get
+2021-02-20 16:04:05 INFO  UserDAO:213 - User was get
+2021-02-20 16:07:48 INFO  UserDAO:213 - User was get
+2021-02-20 16:08:02 INFO  UserDAO:213 - User was get
+2021-02-20 16:11:03 INFO  UserDAO:213 - User was get
+2021-02-20 16:11:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 16:11:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 16:11:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 16:11:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 16:11:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 16:11:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 16:11:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 16:11:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 16:11:03 INFO  OrderDAO:53 - Orders for user with id 1 is selected!
+2021-02-20 16:11:03 INFO  OrderService:63 - orders selected
+2021-02-20 16:11:13 INFO  UserDAO:213 - User was get
+2021-02-20 16:13:44 INFO  UserDAO:213 - User was get
+2021-02-20 16:13:44 INFO  OrderDAO:331 - All orders is got!
+2021-02-20 16:13:44 INFO  OrderDAO:331 - All orders is got!
+2021-02-20 16:13:44 INFO  OrderService:423 - All orders by limit got!
+2021-02-20 16:13:44 INFO  OrderService:395 - Orders count -10
+2021-02-20 20:43:40 INFO  UserDAO:213 - User was get
+2021-02-20 20:43:40 INFO  OrderDAO:331 - All orders is got!
+2021-02-20 20:43:40 INFO  OrderDAO:331 - All orders is got!
+2021-02-20 20:43:40 INFO  OrderService:423 - All orders by limit got!
+2021-02-20 20:43:40 INFO  OrderService:395 - Orders count -10
+2021-02-20 20:44:00 INFO  OrderDAO:331 - All orders is got!
+2021-02-20 20:44:00 INFO  OrderDAO:331 - All orders is got!
+2021-02-20 20:44:00 INFO  OrderService:423 - All orders by limit got!
+2021-02-20 20:44:00 INFO  OrderService:395 - Orders count -10
+2021-02-20 20:44:01 INFO  OrderDAO:331 - All orders is got!
+2021-02-20 20:44:01 INFO  OrderDAO:331 - All orders is got!
+2021-02-20 20:44:01 INFO  OrderService:423 - All orders by limit got!
+2021-02-20 20:44:01 INFO  OrderService:395 - Orders count -10
+2021-02-20 20:44:08 INFO  OrderDAO:360 - Count of paid orders was get
+2021-02-20 20:44:08 INFO  OrderService:446 - All orders by day were get!
+2021-02-20 20:44:08 INFO  OrderDAO:381 - Avg road was get!
+2021-02-20 20:44:15 INFO  OrderDAO:331 - All orders is got!
+2021-02-20 20:44:15 INFO  OrderDAO:331 - All orders is got!
+2021-02-20 20:44:15 INFO  OrderService:423 - All orders by limit got!
+2021-02-20 20:44:15 INFO  OrderService:395 - Orders count -10
+2021-02-20 20:44:28 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-20 20:44:28 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-20 20:44:28 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-20 20:44:28 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-20 20:44:28 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-20 20:44:28 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-20 20:44:28 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-20 20:44:28 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-20 20:44:28 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-20 20:44:28 INFO  OrderDAO:185 - Top 3 orders by time was selected!
+2021-02-20 20:44:28 INFO  OrderService:231 - orders by time selected

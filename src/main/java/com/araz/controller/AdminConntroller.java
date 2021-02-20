@@ -25,7 +25,7 @@ public class AdminConntroller extends HttpServlet {
     public void init() throws ServletException {
         orderDAO = new OrderDAO();
         orderService = new OrderService(orderDAO);
-        sendEmail = new SendEmail("gnomich241999@gmail.com", "gnomichgnomich1999");
+        sendEmail = new SendEmail("email", "password");
         userDAO = new UserDAO();
         userService = new UserService(userDAO);
     }

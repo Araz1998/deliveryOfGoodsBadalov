@@ -47,7 +47,7 @@ public class OrderService {
         return result;
     }
 
-    public List<Order> userOrders(int id){
+    public List<Order> getUserOrders(int id){
         List<Order> orders = new ArrayList<>();
         Connection connection = null;
         try {
@@ -74,32 +74,32 @@ public class OrderService {
         return orders;
     }
 
-    public List<Order> getAllOrders(){
-        List<Order> orderList = new ArrayList<>();
-        Connection connection = null;
-        try {
-            if(connection == null || connection.isClosed()){
-                connection = ConnectionPool.getConnection();
-            }
-            try {
-                orderList = orderDAO.getAllOrders(connection);
-            } catch (ApplicationExeption applicationExeption) {
-                applicationExeption.printStackTrace();
-            }
-            connection.commit();
-            log.info("All orders'e got!");
-        } catch (SQLException e) {
-            e.printStackTrace();
-            rollbackConnection(connection);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        return orderList;
-    }
+//    public List<Order> getAllOrders(){
+//        List<Order> orderList = new ArrayList<>();
+//        Connection connection = null;
+//        try {
+//            if(connection == null || connection.isClosed()){
+//                connection = ConnectionPool.getConnection();
+//            }
+//            try {
+//                orderList = orderDAO.getAllOrders(connection);
+//            } catch (ApplicationExeption applicationExeption) {
+//                applicationExeption.printStackTrace();
+//            }
+//            connection.commit();
+//            log.info("All orders'e got!");
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//            rollbackConnection(connection);
+//        } finally {
+//            try {
+//                connection.close();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        return orderList;
+//    }
 
 
     public boolean admitUserOrder(int id) {
@@ -214,8 +214,10 @@ public class OrderService {
         return orders;
     }
 
-
-    public List<Order> getOrdersByTime(){
+    /*
+    возможно удалить
+     */
+    public List<Order> getOrdersByDate(){
         List<Order> orders = new ArrayList<>();
         Connection connection = null;
         try {
@@ -223,7 +225,7 @@ public class OrderService {
                 connection = ConnectionPool.getConnection();
             }
             try {
-                orders = orderDAO.getOrderByTime(connection);
+                orders = orderDAO.getOrderByDate(connection);
             } catch (ApplicationExeption applicationExeption) {
                 applicationExeption.printStackTrace();
             }
@@ -269,32 +271,32 @@ public class OrderService {
         return order;
     }
 
-    public List<Order> getOrdersByStatusConfirmed(){
-        List<Order> orders = new ArrayList<>();
-        Connection connection = null;
-        try {
-            if(connection == null || connection.isClosed()){
-                connection = ConnectionPool.getConnection();
-            }
-            try {
-                orders = orderDAO.getOrderByStatusConfirmed(connection);
-            } catch (ApplicationExeption applicationExeption) {
-                applicationExeption.printStackTrace();
-            }
-            connection.commit();
-            log.info("orders selected");
-        } catch (SQLException e) {
-            e.printStackTrace();
-            rollbackConnection(connection);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        return orders;
-    }
+//    public List<Order> getOrdersByStatusConfirmed(){
+//        List<Order> orders = new ArrayList<>();
+//        Connection connection = null;
+//        try {
+//            if(connection == null || connection.isClosed()){
+//                connection = ConnectionPool.getConnection();
+//            }
+//            try {
+//                orders = orderDAO.getOrdersByStatusConfirmed(connection);
+//            } catch (ApplicationExeption applicationExeption) {
+//                applicationExeption.printStackTrace();
+//            }
+//            connection.commit();
+//            log.info("orders selected");
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//            rollbackConnection(connection);
+//        } finally {
+//            try {
+//                connection.close();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        return orders;
+//    }
 
     public boolean updateOrderToStatusPayed(int id) {
         boolean result = false;
@@ -334,6 +336,7 @@ public class OrderService {
             try {
                 orderDAO.insertCodeToOrder(connection,code ,id);
                 result = true;
+                System.out.println(result + "code insert");
             } catch (ApplicationExeption applicationExeption) {
                 applicationExeption.printStackTrace();
             }
@@ -434,42 +437,63 @@ public class OrderService {
         return orderList;
     }
 
-    public List<Integer> getOrdersStatusByDay(String date)  {
-        List<Integer> list = new ArrayList<>();
+//    public List<Integer> getOrdersStatusByDay(String date)  {
+//        List<Integer> list = new ArrayList<>();
+//        Connection connection = null;
+//        try {
+//            if(connection == null || connection.isClosed()){
+//                connection = ConnectionPool.getConnection();
+//            }
+//            list = orderDAO.getOrdersStatusByDay(connection, date);
+//            connection.commit();
+//            log.info("All orders by day were get!");
+//        } catch (SQLException | ApplicationExeption e) {
+//            rollbackConnection(connection);
+//            try {
+//                throw new ApplicationExeption(e.getMessage());
+//            } catch (ApplicationExeption applicationExeption) {
+//
+//            }
+//        } finally {
+//            try {
+//                connection.close();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        return list;
+//    }
+
+//    public double getAvgRoadByDay(String date){
+//        double avg = 0;
+//        Connection connection = null;
+//        try {
+//            if(connection == null || connection.isClosed()){
+//                connection = ConnectionPool.getConnection();
+//            }
+//            avg = orderDAO.getAvgRoadByDat(connection, date);
+//        }catch (SQLException | ApplicationExeption e) {
+//            rollbackConnection(connection);
+//            log.error(e.getMessage(), e);
+//        } finally {
+//            try {
+//                connection.close();
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        return avg;
+//    }
+
+    public List<String> getInfoForDay(String date){
+        List<String> info = new ArrayList<>();
         Connection connection = null;
         try {
             if(connection == null || connection.isClosed()){
                 connection = ConnectionPool.getConnection();
             }
-            list = orderDAO.getOrdersStatusByDay(connection, date);
-            connection.commit();
-            log.info("All orders by day were get!");
+            info = orderDAO.getInfoForDay(connection, date);
         } catch (SQLException | ApplicationExeption e) {
-            rollbackConnection(connection);
-            try {
-                throw new ApplicationExeption(e.getMessage());
-            } catch (ApplicationExeption applicationExeption) {
-
-            }
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        return list;
-    }
-
-    public double getAvgRoadByDay(String date){
-        double avg = 0;
-        Connection connection = null;
-        try {
-            if(connection == null || connection.isClosed()){
-                connection = ConnectionPool.getConnection();
-            }
-            avg = orderDAO.getAvgRoadByDat(connection, date);
-        }catch (SQLException | ApplicationExeption e) {
             rollbackConnection(connection);
             log.error(e.getMessage(), e);
         } finally {
@@ -479,7 +503,7 @@ public class OrderService {
                 e.printStackTrace();
             }
         }
-        return avg;
+        return info;
     }
 
     private void rollbackConnection(Connection connection){

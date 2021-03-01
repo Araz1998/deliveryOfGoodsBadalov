@@ -31,7 +31,7 @@ public class UserOrderController extends HttpServlet {
             req.setAttribute("errMessage", "You haven't logined in your profile");
             req.getRequestDispatcher("view/login.jsp").forward(req, resp);
         }
-        List<Order> orderList = orderService.userOrders(user.getId());
+        List<Order> orderList = orderService.getUserOrders(user.getId());
         req.setAttribute("orderList", orderList);
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("/view/user.jsp");
 
@@ -41,18 +41,15 @@ public class UserOrderController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getSession().getAttribute("user") == null){
-            req.setAttribute("errMessage", "You haven't logined in your profile");
+            req.setAttribute("errMessage", "You haven't logged in your profile");
             req.getRequestDispatcher("view/login.jsp").forward(req, resp);
         }
         User user = (User) req.getSession().getAttribute("user");
-        System.out.println("user id is --- " + user.getId());
         Order order = (Order) req.getSession().getAttribute("order");
         order.setUserId(String.valueOf(user.getId()));
         orderService.insert(order);
 
-        System.out.println(order.getCost());
         resp.sendRedirect("/orders");
-
     }
 
 

@@ -14,7 +14,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-public class AdminConntroller extends HttpServlet {
+/**
+ * Controller for admin
+ *
+ */
+public class AdminController extends HttpServlet {
     private OrderDAO orderDAO;
     private UserDAO userDAO;
     private UserService userService;
@@ -25,7 +29,7 @@ public class AdminConntroller extends HttpServlet {
     public void init() throws ServletException {
         orderDAO = new OrderDAO();
         orderService = new OrderService(orderDAO);
-        sendEmail = new SendEmail("email", "password");
+        sendEmail = new SendEmail("email", "passwor");
         userDAO = new UserDAO();
         userService = new UserService(userDAO);
     }
@@ -55,6 +59,14 @@ public class AdminConntroller extends HttpServlet {
         }
     }
 
+
+    /**
+     * This method return list of order from db, by pagination
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     private void listOrder(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String paramPage = req.getParameter("page");
         String paramPageSize = req.getParameter("pageSize");
@@ -70,6 +82,15 @@ public class AdminConntroller extends HttpServlet {
         req.getRequestDispatcher("/view/admin.jsp").forward(req, resp);
     }
 
+
+    /**
+     * This method admit user order by id: send email for user, with code.
+     * This code is used to pay for the order.
+     * @param req
+     * @param resp
+     * @throws IOException
+     * @throws ServletException
+     */
     private void admitOrder(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         int id = Integer.parseInt(req.getParameter("id"));
         orderService.admitUserOrder(id);
@@ -78,13 +99,20 @@ public class AdminConntroller extends HttpServlet {
         System.out.println("HASF from ADMIN - " + order.hashCode());
         int code = sendEmail.send(order, email);
         orderService.insertCodeToOrder(code, id);
-        resp.sendRedirect("/admin");
+        resp.sendRedirect("/admin?pageSize=2&page=1");
     }
 
+
+    /**
+     * This method delete order by order's id
+     * @param req
+     * @param resp
+     * @throws IOException
+     */
     private void deleteOrder(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         int id = Integer.parseInt(req.getParameter("id"));
         orderService.deleteOrder(id);
-        resp.sendRedirect("/admin");
+        resp.sendRedirect("/admin?pageSize=2&page=1");
     }
 
 }

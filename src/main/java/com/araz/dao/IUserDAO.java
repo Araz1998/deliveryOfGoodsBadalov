@@ -8,9 +8,8 @@ import java.util.List;
 
 public interface IUserDAO {
      boolean insertUser(Connection connection, User user) throws ApplicationExeption;
-     List<User> getAllUsers(Connection connection) throws ApplicationExeption;
-     boolean deleteUser(Connection connection, User user) throws ApplicationExeption;
-     boolean updateUser(Connection connection, User user);
      User getUser(Connection connection, int id) throws ApplicationExeption;
+     String getUserEmail(Connection connection, int id) throws ApplicationExeption;
+     User getUser(Connection connection, String login, String password) throws ApplicationExeption;
 
 }

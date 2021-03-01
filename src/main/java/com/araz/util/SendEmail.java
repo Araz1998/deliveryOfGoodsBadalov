@@ -1,16 +1,17 @@
 package com.araz.util;
 
 import com.araz.entity.Order;
+import org.apache.log4j.Logger;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
-
-
 public class SendEmail {
-        private String username;
+    Logger log = Logger.getLogger(SendEmail.class);
+
+    private String username;
         private String password;
         private Properties props;
 
@@ -35,24 +36,25 @@ public class SendEmail {
 
             try {
                 Message message = new MimeMessage(session);
-                //от кого
+                //from user
                 message.setFrom(new InternetAddress(username));
-                //кому
+                //to user
                 message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail));
-                //тема сообщения
+                //title of message
                 String subject = "Azziz comp";
                 message.setSubject(subject);
-                //текст
+                //message
                 String text = "Hello," + order.getUserId() + "\n Your order with id: " + order.getId() + " has been confirmed. Please enter this code to pay for your order, and we will immediately begin to fulfill it.\n Regards, Araz\n" +
                         "Your code: " + order.hashCode();
                 System.out.println("SEND EMAIL " + order.hashCode() + "ID:" + order.getId());
 
                 message.setText(text);
 
-                //отправляем сообщение
+                //send message
                 Transport.send(message);
+                log.info("Email was send");
             } catch (MessagingException e) {
-                throw new RuntimeException(e);
+                log.error("Cant send email");
             }
             return order.hashCode();
         }

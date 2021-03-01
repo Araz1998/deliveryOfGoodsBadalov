@@ -7,6 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="util" tagdir="/WEB-INF/tags" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %>
+<fmt:setLocale value="${lang}"/>
+<fmt:setBundle basename="messages"/>
 
 <html>
 <head>
@@ -16,19 +19,19 @@
 <body>
 <form action="/codeCheck" method="post">
     <div class="card text-center d-block mx-auto shadow-lg p-3 mb-5 bg-body rounded" style="width: 25rem;">
-        <a href="/orders">Registration</a>
+        <a href="/orders"><fmt:message key="pay.back"/> </a>
 
         <div class="card-header">
-            Please, enter code for order
+            <fmt:message key="pay.title"/>
         </div>
         <div class="card-body">
             <div class="form-floating mb-3">
-                <input class="form-control" name="code" placeholder="Code">
+                <input class="form-control" name="code" placeholder="<fmt:message key="pay.code"/>">
             </div>
             <div class="form-floating mb-3">
-                <input class="form-control" name="orderId" placeholder="order id">
+                <input class="form-control" name="orderId" placeholder="<fmt:message key="pay.order.id"/>">
             </div>
-            <button type="submit" class="btn btn-primary btn-lg d-block mx-auto">Pay</button>
+            <button type="submit" class="btn btn-primary btn-lg d-block mx-auto"><fmt:message key="pay.button"/></button>
         </div>
         <util:statusPay error="${errorMessage}" successful="${successful}"/>
     </div>

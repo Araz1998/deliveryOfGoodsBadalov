@@ -9,10 +9,10 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderDAO implements IResourcesCloseable {
+public class OrderDAO implements IOrderDAO, IResourcesCloseable {
     Logger logger = Logger.getLogger(OrderDAO.class);
 
-
+    @Override
     public boolean insertOrder(Connection connection, Order order) throws ApplicationExeption {
         boolean result = false;
         PreparedStatement statement = null;
@@ -38,6 +38,7 @@ public class OrderDAO implements IResourcesCloseable {
         return result;
     }
 
+    @Override
     public List<Order> getUserOrder(Connection connection, int id) throws ApplicationExeption {
         List<Order> orders = new ArrayList<>();
         PreparedStatement statement = null;
@@ -50,8 +51,8 @@ public class OrderDAO implements IResourcesCloseable {
                 Order order = constructOrder(rs);
                 order.setDate(rs.getString("date"));
                 orders.add(order);
-                logger.info("Orders for user with id " + id + " is selected!");
             }
+            logger.info("Orders for user with id " + id + " is selected!");
         } catch (SQLException e) {
             logger.error(e.getMessage());
             throw new ApplicationExeption("Can't get user's orders");
@@ -61,6 +62,7 @@ public class OrderDAO implements IResourcesCloseable {
         return orders;
     }
 
+    @Override
     public List<Order> getAllOrders(Connection connection) throws ApplicationExeption {
         List<Order> orderList = new ArrayList<>();
         PreparedStatement statement = null;
@@ -83,8 +85,8 @@ public class OrderDAO implements IResourcesCloseable {
                 String status = rs.getString(9);
                 Order order = new Order(orderId, fromCity, toCity, road, time, baggage, price, userId, status);
                 orderList.add(order);
-                logger.info("All orders is got!");
             }
+            logger.info("All orders is got!");
         } catch (SQLException e) {
             logger.error(e.getMessage());
             throw new ApplicationExeption("Can't get user's orders");
@@ -94,6 +96,7 @@ public class OrderDAO implements IResourcesCloseable {
         return orderList;
     }
 
+    @Override
     public boolean admitUserOrder(Connection connection, int id) throws ApplicationExeption {
         boolean result = false;
         PreparedStatement statement = null;
@@ -112,6 +115,7 @@ public class OrderDAO implements IResourcesCloseable {
         return result;
     }
 
+    @Override
     public boolean deleteOrder(Connection connection, int id) throws ApplicationExeption {
         boolean result = false;
         PreparedStatement statement = null;
@@ -130,6 +134,7 @@ public class OrderDAO implements IResourcesCloseable {
         return result;
     }
 
+    @Override
     public List<Order> getOrderByPrice(Connection connection) throws ApplicationExeption {
         List<Order> orders = new ArrayList<>();
         PreparedStatement statement = null;
@@ -140,8 +145,8 @@ public class OrderDAO implements IResourcesCloseable {
             while (rs.next()) {
                 Order order = constructOrder(rs);
                 orders.add(order);
-                logger.info("Top 3 orders by price was selected!");
             }
+            logger.info("Top 3 orders by price was selected!");
         } catch (SQLException e) {
             logger.error(e.getMessage());
             throw new ApplicationExeption("Can't get top orders by price");
@@ -151,6 +156,7 @@ public class OrderDAO implements IResourcesCloseable {
         return orders;
     }
 
+    @Override
     public List<Order> getOrderByRoad(Connection connection) throws ApplicationExeption {
         List<Order> orders = new ArrayList<>();
         PreparedStatement statement = null;
@@ -161,8 +167,8 @@ public class OrderDAO implements IResourcesCloseable {
             while (rs.next()) {
                 Order order = constructOrder(rs);
                 orders.add(order);
-                logger.info("Top 3 orders by road was selected!");
             }
+            logger.info("Top 3 orders by road was selected!");
         } catch (SQLException e) {
             logger.error(e.getMessage());
             throw new ApplicationExeption("Can't get top orders by price");
@@ -172,7 +178,8 @@ public class OrderDAO implements IResourcesCloseable {
         return orders;
     }
 
-    public List<Order> getOrderByTime(Connection connection) throws ApplicationExeption {
+    @Override
+    public List<Order> getOrderByDate(Connection connection) throws ApplicationExeption {
         List<Order> orders = new ArrayList<>();
         PreparedStatement statement = null;
         ResultSet rs = null;
@@ -182,8 +189,8 @@ public class OrderDAO implements IResourcesCloseable {
             while (rs.next()) {
                 Order order = constructOrder(rs);
                 orders.add(order);
-                logger.info("Top 3 orders by time was selected!");
             }
+            logger.info("Top 3 orders by time was selected!");
         } catch (SQLException e) {
             logger.error(e.getMessage());
             throw new ApplicationExeption("Can't get top orders by price");
@@ -193,6 +200,7 @@ public class OrderDAO implements IResourcesCloseable {
         return orders;
     }
 
+    @Override
     public Order getOrderById (Connection connection, int id) throws ApplicationExeption {
         Order order = null;
         PreparedStatement statement = null;
@@ -204,8 +212,8 @@ public class OrderDAO implements IResourcesCloseable {
             while (rs.next()) {
                 order = constructOrder(rs);
                 System.out.println("Hash from OrderDAO: "+ order.hashCode());
-                logger.info("Order with id: " + id +  " got!");
             }
+            logger.info("Order with id: " + id +  " got!");
         } catch (SQLException e) {
             logger.error(e.getMessage());
             throw new ApplicationExeption("Can't get order with id: " + id);
@@ -215,7 +223,8 @@ public class OrderDAO implements IResourcesCloseable {
         return order;
     }
 
-    public List<Order> getOrderByStatusConfirmed (Connection connection) throws ApplicationExeption {
+    @Override
+    public List<Order> getOrdersByStatusConfirmed(Connection connection) throws ApplicationExeption {
         List<Order> orderList = new ArrayList<>();
         PreparedStatement statement = null;
         ResultSet rs = null;
@@ -225,8 +234,8 @@ public class OrderDAO implements IResourcesCloseable {
             while (rs.next()) {
                 Order order = constructOrder(rs);
                 orderList.add(order);
-                logger.info("Confirmed orders was selected!");
             }
+            logger.info("Confirmed orders was selected!");
         } catch (SQLException e) {
             logger.error(e.getMessage());
             throw new ApplicationExeption("Can't get orders");
@@ -236,6 +245,7 @@ public class OrderDAO implements IResourcesCloseable {
         return orderList;
     }
 
+    @Override
     public boolean updateOrderToStatusPayed(Connection connection, int id) throws ApplicationExeption {
         boolean result = false;
         PreparedStatement statement = null;
@@ -254,6 +264,7 @@ public class OrderDAO implements IResourcesCloseable {
         return result;
     }
 
+    @Override
     public boolean insertCodeToOrder(Connection connection, int code, int id) throws ApplicationExeption {
         boolean result = false;
         PreparedStatement statement = null;
@@ -273,6 +284,7 @@ public class OrderDAO implements IResourcesCloseable {
         return result;
     }
 
+    @Override
     public int getOrderCode (Connection connection, int id) throws ApplicationExeption {
         int code = 0;
         PreparedStatement statement = null;
@@ -283,8 +295,8 @@ public class OrderDAO implements IResourcesCloseable {
             rs = statement.executeQuery();
             while (rs.next()) {
                 code = rs.getInt("code");
-                logger.info("Code from order with id: " + id +  " got!");
             }
+            logger.info("Code from order with id: " + id +  " got!");
         } catch (SQLException e) {
             logger.error(e.getMessage());
             throw new ApplicationExeption("Can't get code from order with id:" + id);
@@ -294,6 +306,7 @@ public class OrderDAO implements IResourcesCloseable {
         return code;
     }
 
+    @Override
     public int getOrdersNumber(Connection connection) throws ApplicationExeption {
         int ordersNumber = 0;
         Statement statement = null;
@@ -304,10 +317,10 @@ public class OrderDAO implements IResourcesCloseable {
             if (rs.next()) {
                 ordersNumber = rs.getInt(1);
             }
-            System.out.println(ordersNumber + " -count order");
+            logger.info(ordersNumber + " - count of orders");
         } catch (SQLException e) {
             logger.error(e.getMessage());
-            throw new ApplicationExeption("Cannot find number of orders", e);
+            throw new ApplicationExeption("Cannot find count of orders", e);
         } finally {
             close(rs, statement);
         }
@@ -315,7 +328,7 @@ public class OrderDAO implements IResourcesCloseable {
         return ordersNumber;
     }
 
-
+    @Override
     public List<Order> getAllOrdersByLimit(Connection connection, int page, int pageSize) throws ApplicationExeption {
         List<Order> orderList = new ArrayList<>();
         PreparedStatement statement = null;
@@ -328,8 +341,8 @@ public class OrderDAO implements IResourcesCloseable {
             while (rs.next()) {
                 Order order = constructOrder(rs);
                 orderList.add(order);
-                logger.info("All orders is got!");
             }
+            logger.info("All orders is got!");
         } catch (SQLException e) {
             logger.error(e.getMessage());
             throw new ApplicationExeption("Can't get user's orders");
@@ -339,6 +352,7 @@ public class OrderDAO implements IResourcesCloseable {
         return orderList;
     }
 
+    @Override
     public List<Integer> getOrdersStatusByDay(Connection connection, String date) throws ApplicationExeption {
         List<Integer> list = new ArrayList<>();
         PreparedStatement statement = null;
@@ -367,6 +381,7 @@ public class OrderDAO implements IResourcesCloseable {
         return list;
     }
 
+    @Override
     public double getAvgRoadByDat(Connection connection, String date) throws ApplicationExeption {
         double avgRoad = 0;
         PreparedStatement statement = null;
@@ -388,6 +403,35 @@ public class OrderDAO implements IResourcesCloseable {
         return avgRoad;
     }
 
+    @Override
+    public List<String> getInfoForDay(Connection connection, String date) throws ApplicationExeption {
+        ResultSet rs = null;
+        PreparedStatement statement = null;
+        List<String> info = new ArrayList<>();
+        try {
+            statement = connection.prepareStatement(Constant.GET_INFO_FOR_DAY);
+            statement.setString(1, date);
+            statement.setString(2, date);
+            statement.setString(3, date);
+            statement.setString(4, date);
+            statement.setString(5, date);
+            rs = statement.executeQuery();
+            while (rs.next()){
+                info.add(rs.getString(1));
+                info.add(rs.getString(2));
+                info.add(rs.getString(3));
+                info.add(rs.getString(4));
+                info.add(String.format("%.2f", rs.getDouble(5)));
+            }
+            logger.info("Info for date: " + date + " was get");
+        } catch (SQLException e) {
+            logger.error(e.getMessage());
+            throw new ApplicationExeption("Can't get info for day: " + date);
+        } finally {
+            close(rs, statement);
+        }
+        return info;
+    }
 
     private Order constructOrder(ResultSet rs) throws SQLException {
         Order order = new Order();
@@ -402,7 +446,7 @@ public class OrderDAO implements IResourcesCloseable {
         order.setCost(rs.getFloat(7));
         order.setUserId(rs.getString(8));
         order.setStatus(rs.getString("status"));
-//        order.setDate(rs.getString(9));
+        order.setDate(rs.getString(9));
         return order;
     }
 }

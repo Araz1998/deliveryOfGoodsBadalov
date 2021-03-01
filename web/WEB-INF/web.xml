@@ -58,7 +58,7 @@
 
     <servlet>
         <servlet-name>admin</servlet-name>
-        <servlet-class>com.araz.controller.AdminConntroller</servlet-class>
+        <servlet-class>com.araz.controller.AdminController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>admin</servlet-name>
@@ -67,7 +67,7 @@
 
     <servlet>
         <servlet-name>admit</servlet-name>
-        <servlet-class>com.araz.controller.AdminConntroller</servlet-class>
+        <servlet-class>com.araz.controller.AdminController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>admit</servlet-name>
@@ -75,7 +75,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>delete</servlet-name>
-        <servlet-class>com.araz.controller.AdminConntroller</servlet-class>
+        <servlet-class>com.araz.controller.AdminController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>delete</servlet-name>
@@ -87,7 +87,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>dayReport</servlet-name>
-        <url-pattern>/day-report</url-pattern>
+        <url-pattern>/admin/day-report</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -146,7 +146,7 @@
 
     <filter>
         <filter-name>adminSecr</filter-name>
-        <filter-class>com.araz.filter.AdminConfiq</filter-class>
+        <filter-class>com.araz.filter.AdminConfig</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>adminSecr</filter-name>

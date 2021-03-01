@@ -2,6 +2,8 @@ package com.araz.controller;
 
 import com.araz.entity.Order;
 import com.araz.entity.User;
+import com.araz.service.OrderService;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +19,11 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 
+/**
+ * Class that calculate order
+ */
 public class CalculateOrderController extends HttpServlet {
+    final static Logger log = Logger.getLogger(CalculateOrderController.class);
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req, resp);
@@ -25,7 +31,6 @@ public class CalculateOrderController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("post");
         Order order;
         req.setCharacterEncoding("UTF-8");
 
@@ -33,8 +38,12 @@ public class CalculateOrderController extends HttpServlet {
         String toCity = req.getParameter("toCity");
         String weight = req.getParameter("weight");
         order = calculateDistance(fromCity, toCity);
+
+        if(order == null){
+            req.setAttribute("Error", "There are no cities in the database");
+            req.getRequestDispatcher("index.jsp").forward(req, resp);
+        }
         //calculate distance and time way
-//        order = testMet(fromCity, toCity);
         order.setDate(req.getParameter("calendar"));
         order.setBaggageWeight(weight);
 
@@ -57,24 +66,13 @@ public class CalculateOrderController extends HttpServlet {
 
     }
 
-    public Order testMet(String fromCity, String toCity){
-        Order order = new Order();
-        String s = "217 km";
-        String s2 = "2 h 12 m";
-//        List<Integer> num = new ArrayList<>();
-//        for(String part : s2.split("\\D+"))
-//            num.add(Integer.valueOf(part));
-//        for(Integer i : num){
-//            System.out.println(i);
-//        }
-        String[] temp = s2.split("\\D+");
-        order.setFromCity(fromCity);
-        order.setToCity(toCity);
-        order.setDistance(Integer.parseInt(s.substring(0, s.length()-3)));
-        order.setTime(new Order.Time(temp[0], temp[1]));
-        return order;
-    }
-
+    /**
+     * This is main method, that calculate and return order.
+     * Getting distance info from another site
+     * @param fromCity
+     * @param toCity
+     * @return
+     */
     private Order calculateDistance(String fromCity, String toCity){
         Order order = new Order();
         //dont show a chrom window
@@ -100,19 +98,34 @@ public class CalculateOrderController extends HttpServlet {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        WebElement value_km = driver.findElement(By.xpath("//span[@class='km']"));
-        WebElement value_time = driver.findElement(By.xpath("//span[@class='time']"));
-        System.out.println(value_km.getText());
-        System.out.println(value_time.getText());
-        String[] temp = value_time.getText().split("\\D+");
-        order.setFromCity(fromCity);
-        order.setToCity(toCity);
-        order.setDistance(Integer.parseInt(value_km.getText().substring(0, value_km.getText().length()-3)));
-        order.setTime(new Order.Time(temp[0], temp[1]));
+
+        try {
+
+            WebElement value_km = driver.findElement(By.xpath("//span[@class='km']"));
+
+            WebElement value_time = driver.findElement(By.xpath("//span[@class='time']"));
+
+            System.out.println(value_km.getText());
+            System.out.println(value_time.getText());
+            String[] temp = value_time.getText().split("\\D+");
+            order.setFromCity(fromCity);
+            order.setToCity(toCity);
+            order.setDistance(Integer.parseInt(value_km.getText().substring(0, value_km.getText().length() - 3)));
+            order.setTime(new Order.Time(temp[0], temp[1]));
+        }catch (Exception e ){
+            order = null;
+            log.error("cant return order");
+        }
         return order;
     }
 
 
+    /**
+     * Method, that calcuate an order's price
+     * @param baggageWeight
+     * @param way
+     * @return
+     */
     private float calculatePrice(String baggageWeight, int way){
         float coast = 0;
         switch (baggageWeight){

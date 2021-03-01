@@ -28,15 +28,12 @@ public class UserService {
             if(connection == null || connection.isClosed()){
                 connection = ConnectionPool.getConnection();
             }
-            try {
-                userDAO.insertUser(connection, user);
-                result = true;
-            } catch (ApplicationExeption applicationExeption) {
-                applicationExeption.printStackTrace();
-            }
+            userDAO.insertUser(connection, user);
+            result = true;
             connection.commit();
-        } catch (SQLException e) {
-            e.printStackTrace();
+            log.info("New user insert");
+        } catch (SQLException | ApplicationExeption e) {
+            log.error("cannot add new user");
             rollbackConnection(connection);
         } finally {
             try {
@@ -48,68 +45,6 @@ public class UserService {
         return result;
     }
 
-    public List<User> userList() throws ApplicationExeption, SQLException {
-        List<User> users = null;
-        Connection connection = null;
-        try {
-            if(connection == null || connection.isClosed()){
-                connection = ConnectionPool.getConnection();
-            }
-            userDAO.getAllUsers(connection);
-            connection.commit();
-        } catch (SQLException e) {
-            e.printStackTrace();
-            rollbackConnection(connection);
-        } finally {
-            connection.close();
-        }
-        return users;
-    }
-
-    public int checkUserIsExist(String login){
-        Connection connection = null;
-        int id = 0;
-        try {
-            if(connection == null || connection.isClosed()){
-                connection = ConnectionPool.getConnection();
-            }
-            id = userDAO.checkUserIsExist(connection, login);
-            connection.commit();
-        } catch (SQLException e) {
-            e.printStackTrace();
-            rollbackConnection(connection);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        return id;
-    }
-
-    public Role getUserRole(String login, String password){
-        Connection connection = null;
-        Role role = null;
-        try {
-            if(connection == null || connection.isClosed()){
-                connection = ConnectionPool.getConnection();
-            }
-            role = userDAO.getUserRole(connection, login, password);
-            connection.commit();
-        } catch (SQLException e) {
-            e.printStackTrace();
-            rollbackConnection(connection);
-        } finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        return role;
-    }
-
     public String getUserEmail(int id){
         Connection connection = null;
         String email = null;
@@ -119,8 +54,9 @@ public class UserService {
             }
             email = userDAO.getUserEmail(connection, id);
             connection.commit();
-        } catch (SQLException e) {
-            e.printStackTrace();
+            log.info("User email was get");
+        } catch (SQLException | ApplicationExeption e) {
+            log.error("Can not get user email");
             rollbackConnection(connection);
         } finally {
             try {
@@ -142,8 +78,9 @@ public class UserService {
             user = userDAO.getUser(connection, login, password);
             System.out.println(user.toString());
             connection.commit();
-        } catch (SQLException e) {
-            e.printStackTrace();
+            log.info("User was get");
+        } catch (SQLException | ApplicationExeption e) {
+            log.error("Can not get user");
             rollbackConnection(connection);
         } finally {
             try {

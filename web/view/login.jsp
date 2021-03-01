@@ -31,7 +31,7 @@
         </div>
     </div>
         <button type="submit" class="btn btn-primary btn-lg"><fmt:message key="sign.button"/></button>
-        <a href="/registration">Registration</a>
+        <a href="/registration"><fmt:message key="sign.registration"/> </a>
 
 </form>
     <%if(request.getAttribute("errMessage") != null){%>

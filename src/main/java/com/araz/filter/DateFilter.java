@@ -8,6 +8,9 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * return current date
+ */
 public class DateFilter implements Filter {
 
     @Override

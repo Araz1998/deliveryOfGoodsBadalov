@@ -1,9 +1,5 @@
 package com.araz.util;
 
-import org.apache.commons.validator.routines.EmailValidator;
-
-import java.security.NoSuchAlgorithmException;
-
 public class Constant {
     //User queries
     public static final String INSERT_USER = "INSERT INTO user (login, password, role, email) VALUES (?, ?, ?, ?)";
@@ -30,7 +26,7 @@ public class Constant {
     public static final String DELETE_ORDER = "DELETE FROM user_order where id = ?";
     public static final String SELECT_ORDER_BY_PRICE = "SELECT * FROM user_order order by price DESC";
     public static final String SELECT_ORDER_BY_ROAD = "SELECT * FROM user_order order by road DESC";
-    public static final String SELECT_ORDER_BY_TIME= "SELECT * FROM user_order order by date DESC";
+    public static final String SELECT_ORDER_BY_TIME = "SELECT * FROM user_order order by date DESC";
     public static final String SELECT_ORDER_BY_ID = "SELECT user_order.id, user_order.from_city, user_order.to_city, user_order.time_way, user_order.road, bw.weight as baggage_weight, user_order.price, user.login as user_id, status.status_order as status, date\n" +
             "            FROM user_order join baggage_weight bw on user_order.baggage_weight = bw.id\n" +
             "                            join user on user_order.user_id = user.id\n" +
@@ -61,8 +57,14 @@ public class Constant {
             "        where status = 3 AND date = ?)";
     public static final String GET_AVG_ROAD_BY_DAT = "SELECT AVG(road) FROM user_order where date = ?";
 
+    public static final String GET_INFO_FOR_DAY = "SELECT ? as 'selected_day' ,(SELECT COUNT(user_order.id) as 'new' FROM user_order\n" +
+            "                                                join status on user_order.status = status.id\n" +
+            "                    where status = 1 AND date = ?),\n" +
+            "                   (SELECT COUNT(user_order.id) as 'confirmed' FROM user_order\n" +
+            "                                                join status on user_order.status = status.id\n" +
+            "                    where status = 2 AND date = ?),\n" +
+            "                  (SELECT COUNT(user_order.id) as 'paid' FROM user_order\n" +
+            "                                                join status on user_order.status = status.id\n" +
+            "                    where status = 3 AND date = ?), (SELECT AVG(road) as 'avg_road' FROM user_order where date = ?)";
 
-    public static void main(String[] args) {
-        System.out.println(PasswordHash.getInstance().hash("admin"));
-    }
 }

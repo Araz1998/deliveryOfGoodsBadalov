@@ -13,9 +13,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
 
 
+/**
+ * Registration controller
+ */
 public class RegistrController extends HttpServlet {
 
     private UserDAO userDAO;
@@ -61,6 +63,12 @@ public class RegistrController extends HttpServlet {
         }
     }
 
+
+    /**
+     * Email validator from apache
+     * @param email
+     * @return
+     */
     private boolean emailValid(String email) {
         return EmailValidator.getInstance().isValid(email);
     }

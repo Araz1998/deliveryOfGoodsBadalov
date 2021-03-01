@@ -11,7 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
+/**
+ * Controller for select in main page
+ */
 public class SelectController extends HttpServlet {
 
     private OrderDAO orderDAO;
@@ -27,7 +31,7 @@ public class SelectController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String select = req.getParameter("topSelect");
         List<Order> orderList = getSelect(select);
-        req.setAttribute("orderList", orderList);
+        req.setAttribute("orderList", orderList.stream().limit(4).collect(Collectors.toList()));
         req.getRequestDispatcher("/").forward(req, resp);
     }
 
@@ -39,7 +43,7 @@ public class SelectController extends HttpServlet {
                     orderList = orderService.getOrdersByRoad();
                     break;
                 case "2":
-                    orderList = orderService.getOrdersByTime();
+                    orderList = orderService.getOrdersByDate();
                     break;
                 case "3":
                     orderList = orderService.getOrdersByPrice();

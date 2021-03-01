@@ -51,6 +51,18 @@ public class Order {
         this.status = status;
     }
 
+    public Order(String fromCity, String toCity, int distance, Time time, String baggageWeight, float cost, String userId, String status, String date) {
+        this.fromCity = fromCity;
+        this.toCity = toCity;
+        this.distance = distance;
+        this.time = time;
+        this.baggageWeight = baggageWeight;
+        this.cost = cost;
+        this.userId = userId;
+        this.status = status;
+        this.date = date;
+    }
+
     public int getId() {
         return id;
     }

@@ -7,9 +7,6 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-/*
-Pool connection
- */
 
 public class ConnectionPool {
     private ConnectionPool(){
@@ -17,7 +14,7 @@ public class ConnectionPool {
 
     private static ConnectionPool instance;
 
-    public static ConnectionPool getInstance(){
+    public static synchronized ConnectionPool getInstance(){
         if (instance==null)
             instance = new ConnectionPool();
         return instance;
